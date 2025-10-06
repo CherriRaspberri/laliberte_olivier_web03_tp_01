@@ -1,0 +1,207 @@
+<!--Olivier Laliberte - 2025-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Imports-->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+
+    <!--Local files-->
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="./src/script.js"></script>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Edu+SA+Hand:wght@400..700&family=Reenie+Beanie&family=Shrikhand&display=swap"
+        rel="stylesheet">
+
+    <title>Web_03 - TP1</title>
+</head>
+
+<body class="d-flex flex-column justify-content-between">
+    <!--
+        Header: 
+        - Title
+        - Subtitle
+        - Vinyl record (Animation: continuous spin - inf.)
+    -->
+    <header class="bg-dark" id="header-container">
+        <div class="container h-100 w-100">
+            <div class="row pt-5 h-100">
+                <!--Title + subtitle-->
+                <div
+                    class="col-lg-8 text-light d-flex flex-column align-items-center align-items-lg-start align-items-xl-center justify-content-center text-justify lh-1 mb-3 mx-auto mx-md-0">
+                    <p class="m-0" id="header-title">CLASSICS</p>
+                    <div
+                        class="d-flex justify-content-center justify-content-lg-start justify-content-xl-between align-items-top gap-3 w-100 header-subtitle">
+                        <p>Encore</p>
+                        <p>une</p>
+                        <p>autre</p>
+                        <p>critique</p>
+                        <p>musicale</p>
+                    </div>
+                </div>
+
+                <!--Vinyl record w/ animation-->
+                <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+                    <div id="vinyl-container">
+                        <img src="./assets/images/vinyl_record.png" class="vinyl img-fluid" id="record">
+                        <img src="./assets/images/vinyl_cover.jpg" class="vinyl img-fluid" id="cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--
+        Main:
+        - infinite scroll banner
+        - song list
+        - 2 sides:
+            - Left side:
+                - Review
+                - Images
+            -Right side:
+                - Album info
+                - Videos
+    -->
+    <main class="text-light bg-dark flex-grow-1">
+        <!--Infinite scroll banner-->
+        <div class="d-flex align-items-center" id="banner-container">
+            <!--Children generated dynamically - controlled by the size of the window-->
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <!--Col-01 : Quote + critic-->
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <!--Quote-->
+                    <p class="header-subtitle text-justify">
+                        "Like the band itself, Classics sounds like it was designed to serve something-- a
+                        movie or a video game or a Power Point presentation."
+                    </p>
+                    <p class="quote">
+                        - Pitchfork, Novembre 2006
+                    </p>
+
+                    <!--Critic-->
+                    <div class="text-justify mb-3 critic-font">
+                        Avec Classics, Ratatat signe un deuxième album audacieux et hypnotique, où les guitares saturées
+                        rencontrent des beats électroniques d'une précision chirurgicale. Le duo new-yorkais parvient à
+                        créer une atmosphère unique, à la fois rétro et futuriste, sans jamais recourir à la voix
+                        humaine. Chaque morceau est un voyage instrumental, oscillant entre énergie brute et mélancolie
+                        subtile.
+                    </div>
+
+                    <img src="assets/images/img_critic_01.jpg" class="img-fluid mb-3 rounded">
+
+                    <div class="text-justify mb-3 critic-font">
+                        Des titres comme "Wildcat" ou "Tropicana" captivent par leur inventivité sonore et leur richesse
+                        rythmique. Bien que l’album puisse sembler répétitif à la première écoute, c’est justement dans
+                        cette répétition que Ratatat tisse une identité sonore cohérente et immersive.
+                    </div>
+
+                    <div class="text-justify mb-5 critic-font">
+                        En somme, Classics est une œuvre singulière qui confirme le talent du duo pour transformer des
+                        riffs de guitare simples en véritables hymnes électroniques. Un classique du genre.
+                    </div>
+                </div>
+
+                <!--Col-02 : Info + review-->
+                <div class="col-lg-4 offset-lg-1 order-1 order-lg-2 mt-5 mt-lg-0" id="grid-container">
+
+                    <div class="mt-5 mt-lg-0 mb-5">
+                        <!--
+                            Album info :
+                            - Release Date
+                            - Album Length
+                            - Recorded date
+                            - Genre
+                            - Label
+                        -->
+                        <table class="table table-dark table-striped table-hover">
+                            <tbody>
+                                <tr>
+                                    <th>Date de sortie</th>
+                                    <td class="text-end">22 Août 2006</td>
+                                </tr>
+                                <tr>
+                                    <th>Date d'enregistrement</th>
+                                    <td class="text-end">Novembre 2003 - Mars 2006</td>
+                                </tr>
+                                <tr>
+                                    <th>Longueur</th>
+                                    <td class="text-end">42:31</td>
+                                </tr>
+                                <tr>
+                                    <th>Genre</th>
+                                    <td class="text-end">Indie Rock - Electronica - Neo-psychedelia</td>
+                                </tr>
+                                <tr>
+                                    <th>Label</th>
+                                    <td class="text-end">XL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!--Review-->
+                        <div class="grid">
+                            <div class="review-text">Composition : </div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+
+                            <div class="review-text">Paroles : </div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star"></i></div>
+
+                            <div class="review-text">Originalité : </div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+
+                            <div class="review-text">Diversité : </div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star"></i></div>
+
+                            <div class="review-text">Overall : </div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-fill"></i></div>
+                            <div><i class="bi-star-half"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--
+        Footer:
+        - General info
+        - Copyright
+        - Links
+    -->
+    <footer class="bg-secondary p-2">
+        <i class="bi-apple-music"></i> <a href="https://music.apple.com/us/album/classics/354003618">Classics - Apple Music</a> 
+    </footer>
+</body>
+
+</html>
